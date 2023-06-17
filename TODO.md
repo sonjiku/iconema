@@ -1,0 +1,3 @@
+- [ ] Clean up code.
+- [ ] Create argument parser.
+- [ ] Option where user provides colors and program outputs closest match in an image.
