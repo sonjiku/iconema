@@ -5,6 +5,11 @@ import argparse
 import sys
 
 
+"""
+Self explanatory
+"""
+
+
 def create_argument_parser():
     parser = argparse.ArgumentParser(description='Color Matching Program')
     parser.add_argument('-i', '--image', required=True,
@@ -32,12 +37,13 @@ def create_argument_parser():
 def main():
     parser = create_argument_parser()
     args = parser.parse_args()
-    # Set up verbosity
+    """Set verbosity level"""
     if args.verbose:
         log_levels = [logging.WARNING, logging.INFO, logging.DEBUG]
         log_level = log_levels[min(args.verbose, 2)]
         logging.getLogger().setLevel(log_level)
 
+    """Default palette to base matching on"""
     if args.base:
         color_list = ["000000", "ff3333", "33ff33", "ffff33",
                       "3333ff", "ff33ff", "33ffff", "a8a8a8",

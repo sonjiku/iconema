@@ -35,3 +35,11 @@ color13 = #ff80ff
 color14 = #80ffff
 color15 = #ffffff
 ```
+## TODO
+- [ ] Clean up code.
+- [x] Create argument parser.
+- [ ] Transparency support. Implement by converting all RGB colors to RGBA and
+      then returning the apprpriate value, depending on if the user requested
+      alpha matching
+- [x] Option where user provides colors and program outputs closest match in an
+      image.
