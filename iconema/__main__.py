@@ -45,10 +45,10 @@ def main():
 
     """Default palette to base matching on"""
     if args.base:
-        color_list = ["000000", "ff3333", "33ff33", "ffff33",
-                      "3333ff", "ff33ff", "33ffff", "a8a8a8",
-                      "545454", "ff8080", "80ff80", "ffff80",
-                      "8080ff", "ff80ff", "80ffff", "ffffff"]
+        color_list = ["000000ff", "ff3333ff", "33ff33ff", "ffff33ff",
+                      "3333ffff", "ff33ffff", "33ffffff", "a8a8a8ff",
+                      "545454ff", "ff8080ff", "80ff80ff", "ffff80ff",
+                      "8080ffff", "ff80ffff", "80ffffff", "ffffffff"]
     else:
         color_arg = args.colors[0].split() if len(args.colors) == 1 else args.colors
         try:
@@ -58,7 +58,7 @@ def main():
             sys.exit(1)
 
     image = Iconema(args.image, args.downsample)
-    color_matches = [Color.rgb_hex(image.get_match(Color.hex_rgb(theme_color)))
+    color_matches = [Color.rgba_hex(image.get_match(Color.hex_rgba(theme_color)))
                      for theme_color in color_list]
     print(color_matches)
 

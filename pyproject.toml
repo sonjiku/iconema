@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 name = "iconema"
 version = "0.9.0"
 authors = [
-  { name="sonjiku", email="50nj1ku@proton.me" },
+  { name="sonjiku", email="dev.50nj1ku@erine.email" },
 ]
 description = "Script and library that finds a colors nearest match in an image"
 readme = "README.md"

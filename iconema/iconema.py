@@ -1,5 +1,6 @@
 from PIL import Image
 from scipy.spatial import KDTree
+from color import Color
 import numpy as np
 import os
 import logging
@@ -27,7 +28,7 @@ class Iconema:
 
     def set_palette(self):
         pixels = self.file.getcolors(self.file.size[0] * self.file.size[1])
-        palette = {color[1] for color in pixels}
+        palette = {Color.rgb_rgba(color[1]) for color in pixels}
         self.palette = palette
 
     def get_palette(self):
