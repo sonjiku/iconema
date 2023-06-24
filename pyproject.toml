@@ -1,21 +1,23 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
 [project]
 name = "iconema"
-version = "0.9.0"
 authors = [
-  { name="sonjiku", email="dev.50nj1ku@erine.email" },
+  { name="sonjiku", email="contact.50nj1ku@erine.email" },
 ]
-description = "Script and library that finds a colors nearest match in an image"
-readme = "README.md"
+version = "0.5.0"
+description = "Find the closest match to a provided color"
+readme = "readme.md"
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
 ]
 
+
 [project.urls]
-"Homepage" = "https://github.com/chromatch/"
-"Bug Tracker" = "https://github.com/sonjiku/chromatch/issues"
+"Homepage" = "https://github.com/sonjiku/iconema"
+"Bug Tracker" = "https://github.com/sonjiku/iconema/issues"
